@@ -52,3 +52,14 @@ arr.push.apply(arr,arr);
   * Used cache - Add an Expires or a Cache-Control Header. Make Ajax Cacheable. 
   * Avoid CSS Expressions, Redirects, Duplicate Scripts
   * Reduce Cookie Size
+
+### Coding Questions
+
+  *Is palindrome
+```
+function is_palindrome(str) {
+  str = str.replace(/[^a-zA-Z ]/g, ""); //Del all special charcaters
+  if(str[0] !== str[str.length-1]) return false; //Check for long string
+  return str === str.split('').reverse().join('');
+}
+```
