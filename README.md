@@ -20,7 +20,26 @@
   
   In terms of capabilities, cookies only allow you to store strings. sessionStorage and localStorage allow you to store JavaScript primitives but not Objects or Arrays (it is possible to JSON serialise them to store them using the APIs). Session storage will generally allow you to store any primitives or objects supported by your Server Side language/framework. [More](http://stackoverflow.com/questions/19867599/what-is-the-difference-between-localstorage-sessionstorage-session-and-cookie)
   
-#### CSS Questions
+### CSS Questions
+  * How added tag Vertical Alignment?
+    ```css
+      display: table-cell;
+      vertical-align: middle;
+    ```
+
+### JS Questions
+  * What's the difference between a variable that is: null, undefined or undeclared?
+```javascript
+typeof null //'object';
+typeof undeclared //'undefined';
+typeof undefined //'undefined';
+```
+  * How dublicate arr?
+```javascript
+arr.concat(arr);
+//or
+arr.push.apply(arr,arr);
+```
 
 ### Client Optimization
 
