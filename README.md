@@ -56,7 +56,7 @@ arr.push.apply(arr,arr);
 ### Coding Questions
 
   *Is palindrome
-```
+```javascript
 function is_palindrome(str) {
   str = str.replace(/[^a-zA-Z ]/g, ""); //Del all special charcaters
   if(str[0] !== str[str.length-1]) return false; //Check for long string
