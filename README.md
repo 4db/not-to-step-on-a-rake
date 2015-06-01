@@ -77,7 +77,7 @@ Sense: can get access from you social network, withou info about your friends, c
 <li> <b> Client Credentials Flow </b> : OAuth is mainly used for delegated access, but there are cases when the client owns the resource or already has been granted the delegated access outside of a typical OAuth flow. Here you just exchange client credentials for an access token. </li>
 </ul>
 
-<b>The Web Server Flow</b> sheme: </img src="https://github.com/aldb/not-to-step-on-a-rake/blob/master/img/webserverflow.jpg?raw=true">
+<b>The Web Server Flow</b> sheme: https://github.com/aldb/not-to-step-on-a-rake/blob/master/img/webserverflow.jpg
 
 <br>
 <b>The Good Part</b>
