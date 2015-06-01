@@ -6,6 +6,7 @@
   1. [Client Optimization](#client-optimization)
   1. [Network Questions](#network-questions)
   1. [Coding Questions](#coding-questions)
+  1. [ OAuth 2.0](#oauth-2.0)
 
 #### HTML Questions: 
   * What does a doctype do?
@@ -63,3 +64,25 @@ function is_palindrome(str) {
   return str === str.split('').reverse().join('');
 }
 ```
+### OAuth 2.0
+OAuth is often described as a valet key for the web.
+Sense: can get access from you social network, withou info about your friends, calendar and etc.
+<br>
+<b>Various OAuth Flows</b>
+<ul>
+<li> <b> User-Agent Flow </b> : Suitable for clients typically implemented in user-agents (for example, clients running inside a web browser) using a scripting language such as JavaScript. Mostly used by native applications for mobile or desktop, leveraging the embedded or external browser as the user-agent for authorization and it uses the <i>Implicit Grant</i> authorization.</li>
+<li> <b> Web Server Flow </b> : This makes use of the <i>Authorization Code</i> grant and is a redirection-based flow which requires interaction with the end-user's user-agent. Thus, it is most suitable for clients which are a part of web-server based applications, that are typically accessed via a web browser. </li>
+<li> <b> Username and Password Flow </b> :  Used only when there is a high trust between the client and the resource owner and when other flows are not viable, as it involves the transfer of the resource owner's credentials. Examples of clients can be a device operating system or a highly privileged application. This can also be used to migrate existing clients using HTTP Basic or Digest Authentication schemes to OAuth by converting the stored credentials to an access token. </li>
+<li> <b> Assertion Flow </b> : Your client can present an assertion such as SAML Assertion to the authorization server in exchange for an access token. </li>
+<li> <b> Client Credentials Flow </b> : OAuth is mainly used for delegated access, but there are cases when the client owns the resource or already has been granted the delegated access outside of a typical OAuth flow. Here you just exchange client credentials for an access token. </li>
+</ul>
+
+<b>The Web Server Flow</b> sheme: </img src="https://github.com/aldb/not-to-step-on-a-rake/blob/master/img/webserverflow.jpg?raw=true">
+
+<br>
+<b>The Good Part</b>
+OAuth 2.0 also provides several new grant types, which can be used to support many use-cases like native applications
+<b>The Bad Parts</b>
+* Different implementations and interact with them(separate pieces of code for Facebook, Google, Salesforce and etc)
+* Short Lived Tokens: The spec does not mandate the lifetime and scope of the issued tokens. The implementation is free to have a token live forever. Although most of the implementations provide us with short-lived access tokens and a refresh token, which can be used to get a fresh access token.
+* Security: The spec just "recommends" the use of SSL/TLS while sending the tokens in plaintext over the wire. Although, every major implementation has made it a requirement to have secure authorization endpoints as well require that the client must have a secure redirection URL
