@@ -7,6 +7,7 @@
   1. [Network Questions](#network-questions)
   1. [Coding Questions](#coding-questions)
   1. [ OAuth 2.0](#oauth-2.0)
+  1. [OOP](#oop)
 
 #### HTML Questions: 
   * What does a doctype do?
@@ -86,3 +87,18 @@ OAuth 2.0 also provides several new grant types, which can be used to support ma
 * Different implementations and interact with them(separate pieces of code for Facebook, Google, Salesforce and etc)
 * Short Lived Tokens: The spec does not mandate the lifetime and scope of the issued tokens. The implementation is free to have a token live forever. Although most of the implementations provide us with short-lived access tokens and a refresh token, which can be used to get a fresh access token.
 * Security: The spec just "recommends" the use of SSL/TLS while sending the tokens in plaintext over the wire. Although, every major implementation has made it a requirement to have secure authorization endpoints as well require that the client must have a secure redirection URL
+
+### OOP
+ * Paradigm: Abstraction(Abstrcact Class) -> Encapsulation(can use method another class: $app->User()->getName(), where User in App class, getName in User class) -> Inheritance(class B extends A) -> Polymorphism(class Dog extends Animal implements Talk)
+ <br>
+ *  An <b>interface is a contract</b>: the guy writing the interface says, "hey, I accept things looking that way", and the guy using the interface says "Ok, the class I write looks that way".
+ <br>
+ An interface is an empty shell, there are only the signatures of the methods, which implies that the methods do not have a body. The interface can't do anything. It's just a pattern.
+ <br>
+Implementing an interface consumes very little CPU, because it's not a class, just a bunch of names, and therefore there is no expensive look-up to do. It's great when it matters such as in embedded devices.
+* <b>Abstract classes</b>, unlike interfaces, are classes. They are more expensive to use because there is a look-up to do when you inherit from them.
+
+Abstract classes look a lot like interfaces, but they have something more : you can define a behavior for them. It's more about a guy saying, "these classes should look like that, and they have that in common, so fill in the blanks!".
+* Static classes work without new Object: $User::getName()
+
+ 
