@@ -83,7 +83,9 @@ Sense: can get access from you social network, withou info about your friends, c
 
 <br>
 <b>The Good Part</b>
+<br>
 OAuth 2.0 also provides several new grant types, which can be used to support many use-cases like native applications
+<br>
 <b>The Bad Parts</b>
 * Different implementations and interact with them(separate pieces of code for Facebook, Google, Salesforce and etc)
 * Short Lived Tokens: The spec does not mandate the lifetime and scope of the issued tokens. The implementation is free to have a token live forever. Although most of the implementations provide us with short-lived access tokens and a refresh token, which can be used to get a fresh access token.
