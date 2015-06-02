@@ -84,7 +84,7 @@ Sense: can get access from you social network, withou info about your friends, c
 <br>
 <b>The Good Part</b>
 <br>
-OAuth 2.0 also provides several new grant types, which can be used to support many use-cases like native applications
+* OAuth 2.0 also provides several new grant types, which can be used to support many use-cases like native applications
 <br>
 <b>The Bad Parts</b>
 * Different implementations and interact with them(separate pieces of code for Facebook, Google, Salesforce and etc)
