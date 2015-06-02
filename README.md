@@ -125,9 +125,8 @@ setcookie(
     0,//expires at end of session  
     $currentCookieParams['path'],//path  
     $currentCookieParams['domain'],//domain  
-    $datetime,
-    $ip,
-    true //secure  
+    true, https only
+    false, http only
 );  
 ```
 * Have sessions time out
