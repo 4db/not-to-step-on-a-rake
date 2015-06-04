@@ -6,7 +6,7 @@
   1. [Client Optimization](#client-optimization)
   1. [Network Questions](#network-questions)
   1. [Coding Questions](#coding-questions)
-  1. [ OAuth 2.0](#oauth)
+  1. [ OAuth 2.0](#oauth-20)
   1. [OOP](#oop)
   1. [PHP Secure](#php-secure)
 
