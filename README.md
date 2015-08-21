@@ -131,8 +131,8 @@ setcookie(
     false, http only
 );  
 ```
-* Have sessions time out
-* Don't use register globals
+* Have sessions time out.
+* Don't use register globals.
 * Store authentication details on the server. That is, don't send details such as username in the cookie.
 * Check the $_SERVER['HTTP_USER_AGENT']. This adds a small barrier to session hijacking. You can also check the IP address. But this causes problems for users that have changing IP address due to load balancing on multiple internet connections etc (which is the case in our environment here).
 * Lock down access to the sessions on the file system or use custom session handling
